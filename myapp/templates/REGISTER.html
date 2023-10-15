@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>REGISTER</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    </head>
+    <body>
+        <h1 style="font-family: 'Times New Roman', Times, serif;">BANSAL GROCERY STORE</h1>
+        <div class="p-3 mb-2 bg-info-subtle text-emphasis-info">{{message}}</div>
+        <div class="container mt-5">
+            <div class="row">
+                <!-- Left Column for Image -->
+                <div class="col-md-6">
+                <img src="https://cdn5.vectorstock.com/i/1000x1000/95/34/meeting-international-friends-students-from-vector-30239534.jpg" width="550" height="550">
+                </div>
+                <div class="col-md-6">                
+                <form action="/register" method="POST" id="Register">
+                    <label>Username</label>
+                    <input type="text" name="username" class="form-control" required/>
+                    <br>
+                    <label>Password</label>
+                    <input type="password" name="password" class="form-control" required/>
+                </form>
+                <br>
+        <button type="submit" form="Register" value="register" class="btn btn-success">Register</button>
+        <br>
+        <p>Go back to the login page.</p>
+        <a href="/" target="_blank" role="button" class="btn btn-primary">User Login</a>
+        <div style="position: fixed; bottom: 0; left: 0; width: 100%; background-color: #f0f0f0; padding: 10px; text-align: center; font-family: 'Times New Roman', Times, serif;">
+            <div class="p-3 mb-2 bg-info-subtle text-emphasis-info">BANSAL GROCERY STORE</div>
+            </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+        </body>
+</html>

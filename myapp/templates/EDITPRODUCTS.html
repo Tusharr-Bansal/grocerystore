@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDIT PRODUCTS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <h1 style="font-family: 'Times New Roman', Times, serif;">BANSAL GROCERY STORE</h1>
+    <div class="p-3 mb-2 bg-info-subtle text-emphasis-info">There's always a space for new exciting changes!</div>
+    <div class="row">
+        <div class="d-flex justify-content-end">
+            <a href="/adminstore" role="button" class="btn btn-primary">Home</a>
+            <a href="/logout" role="button" class="btn btn-danger">Log out</a>
+        </div>
+      </div>
+        <div class="container mt-5">
+            <div class="row">
+              <!-- Left Column for Image -->
+              <div class="col-md-6">
+                <img src="https://clipart-library.com/img/873446.jpg" width="300" height="500">
+            </div>
+            <div class="col-md-6">
+                <form action="/editproducts" method="POST" id="products">
+                    <label>Select the product</label>
+                    <select name="prodname" class="form-select" aria-label="Default select example">
+                        {% for prod in prods %}
+                        <option value="{{ prod['pname'] }}">{{ prod['pname'] }}</option>
+                        {%endfor%}
+                    </select>
+                    <br>
+                    <label>Product New Name:</label>
+                        <input type="text" name="newname" class="form-control">
+                    <br>
+                        <label>Product New Price:</label>
+                        <input type="number" name="price" class="form-control">
+                        <br>
+                        <label>New Quantity:</label>
+                        <input type="number" name="quantity" class="form-control">
+                        <br>
+                        <label>New Manufacturing Date</label>
+                        <input type="date" name="mandate" class="form-control">
+                        <br>
+                        <label>New Expiry Date</label>
+                        <input type="date" name="expdate" class="form-control">
+                        <br>
+                        <label>New Product image:</label>
+                        <input type="text" name="image" class="form-control">
+                        <br>
+                        <button type="submit" name="submit1" value="editproduct" class="btn btn-success">Edit</button>
+                        <button type="submit" name="submit2" value="delete" class="btn btn-danger">Delete product</button>
+                    </form>
+                    <br>
+            </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    </body>
+</html>

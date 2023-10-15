@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>AdminLogin</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    </head>
+    <body>
+        <h1 style="font-family: 'Times New Roman', Times, serif; text-align: center;">BANSAL GROCERY STORE</h1>
+        <div class="p-3 mb-2 bg-info-subtle text-emphasis-info" style="text-align: center;">{{message}}😉</div>
+        <br>
+        <div class="container mt-5">
+            <div class="row">
+                <!-- Left Column for Image -->
+                <div class="col-md-6">
+                <img src="https://st2.depositphotos.com/1071184/6467/v/600/depositphotos_64677535-stock-illustration-business-customer-care-service.jpg" width="450" height="450">
+                </div>
+                    <div class="col-md-6"> 
+                    <form action="/adminlogin" method="POST" id = "admin">
+                        <div class="mb-3">
+                                    <label>Admin Username</label>
+                                    <input type="text" name="username" class="form-control"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Password</label>
+                                    <input type="password" name="password" class="form-control"/>
+                                </div>
+                                <button type="submit" form="admin" value="login" class="btn btn-primary">LOGIN</button>
+                            </form>
+                        <br/>
+                        <br/>
+                        <p>If you are not an Admin, Go back to Userlogin</p>
+                        <a href="/" role="button" class="btn btn-secondary">User login</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div style="position: fixed; bottom: 0; left: 0; width: 100%; background-color: #f0f0f0; padding: 10px; text-align: center; font-family: 'Times New Roman', Times, serif;">
+            <div class="p-3 mb-2 bg-info-subtle text-emphasis-info">BANSAL GROCERY STORE</div>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    </body>
+</html>
